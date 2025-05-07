@@ -1,0 +1,141 @@
+[gd_scene load_steps=12 format=3 uid="uid://cai7dcfkxmjon"]
+
+[ext_resource type="Script" uid="uid://bm1g0maaiawql" path="res://world.gd" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://ch5k4lhf8r24a" path="res://player.tscn" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://x6v04kn1ocar" path="res://broken_chapel.tscn" id="3_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://stwq32krr8hp" path="res://fence.tscn" id="4_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://dm10hgvquaguo" path="res://tree_one.tscn" id="5_036b0"]
+[ext_resource type="PackedScene" uid="uid://dpmcb03ib6dcq" path="res://tree_two.tscn" id="6_pkg7o"]
+[ext_resource type="PackedScene" uid="uid://dvodyv3itgvfe" path="res://pinetree.tscn" id="7_gbfbk"]
+[ext_resource type="PackedScene" uid="uid://mnwn7u0qdiep" path="res://lamppost.tscn" id="8_gbfbk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbfbk"]
+size = Vector2(16, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ioo17"]
+size = Vector2(16, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wse8f"]
+size = Vector2(352, 16)
+
+[node name="World" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_f3sb7")
+
+[node name="Player" parent="." instance=ExtResource("2_fj7yv")]
+position = Vector2(160, 96)
+
+[node name="BrokenChapel" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(62, 141)
+
+[node name="BackFence" type="Node2D" parent="."]
+y_sort_enabled = true
+position = Vector2(1, 43)
+
+[node name="Fence" parent="BackFence" instance=ExtResource("4_aqk2v")]
+position = Vector2(24, 0)
+
+[node name="Fence2" parent="BackFence" instance=ExtResource("4_aqk2v")]
+position = Vector2(69, 0)
+
+[node name="Fence3" parent="BackFence" instance=ExtResource("4_aqk2v")]
+position = Vector2(114, 0)
+
+[node name="Fence4" parent="BackFence" instance=ExtResource("4_aqk2v")]
+position = Vector2(159, 0)
+
+[node name="Fence5" parent="BackFence" instance=ExtResource("4_aqk2v")]
+position = Vector2(204, 0)
+
+[node name="Fence6" parent="BackFence" instance=ExtResource("4_aqk2v")]
+position = Vector2(249, 0)
+
+[node name="Fence7" parent="BackFence" instance=ExtResource("4_aqk2v")]
+position = Vector2(294, 0)
+
+[node name="Fence8" parent="BackFence" instance=ExtResource("4_aqk2v")]
+position = Vector2(339, 0)
+
+[node name="Trees" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="TreeOne" parent="Trees" instance=ExtResource("5_036b0")]
+position = Vector2(56, 7)
+
+[node name="TreeOne2" parent="Trees" instance=ExtResource("5_036b0")]
+position = Vector2(9, 84)
+
+[node name="TreeOne3" parent="Trees" instance=ExtResource("5_036b0")]
+position = Vector2(152, 195)
+
+[node name="TreeTwo" parent="Trees" instance=ExtResource("6_pkg7o")]
+position = Vector2(309, 79)
+
+[node name="TreeTwo2" parent="Trees" instance=ExtResource("6_pkg7o")]
+position = Vector2(184, 214)
+
+[node name="Pinetree" parent="Trees" instance=ExtResource("7_gbfbk")]
+position = Vector2(12, 186)
+
+[node name="Pinetree2" parent="Trees" instance=ExtResource("7_gbfbk")]
+position = Vector2(2, 173)
+
+[node name="Pinetree3" parent="Trees" instance=ExtResource("7_gbfbk")]
+position = Vector2(206, 5)
+
+[node name="Pinetree4" parent="Trees" instance=ExtResource("7_gbfbk")]
+position = Vector2(220, 16)
+
+[node name="Pinetree5" parent="Trees" instance=ExtResource("7_gbfbk")]
+position = Vector2(246, 11)
+
+[node name="Pinetree6" parent="Trees" instance=ExtResource("7_gbfbk")]
+position = Vector2(283, 205)
+
+[node name="Pinetree7" parent="Trees" instance=ExtResource("7_gbfbk")]
+position = Vector2(295, 180)
+
+[node name="Pinetree8" parent="Trees" instance=ExtResource("7_gbfbk")]
+position = Vector2(303, 212)
+
+[node name="Pinetree9" parent="Trees" instance=ExtResource("7_gbfbk")]
+position = Vector2(311, 178)
+
+[node name="Pinetree10" parent="Trees" instance=ExtResource("7_gbfbk")]
+position = Vector2(319, 205)
+
+[node name="Pinetree11" parent="Trees" instance=ExtResource("7_gbfbk")]
+position = Vector2(323, 165)
+
+[node name="Pinetree12" parent="Trees" instance=ExtResource("7_gbfbk")]
+position = Vector2(294, 100)
+
+[node name="Pinetree13" parent="Trees" instance=ExtResource("7_gbfbk")]
+position = Vector2(255, 220)
+
+[node name="Pinetree14" parent="Trees" instance=ExtResource("7_gbfbk")]
+position = Vector2(114, 71)
+
+[node name="Pinetree15" parent="Trees" instance=ExtResource("7_gbfbk")]
+position = Vector2(126, 58)
+
+[node name="Pinetree16" parent="Trees" instance=ExtResource("7_gbfbk")]
+position = Vector2(134, 75)
+
+[node name="Lamppost" parent="." instance=ExtResource("8_gbfbk")]
+position = Vector2(256, 94)
+
+[node name="Walls" type="StaticBody2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-8, 100)
+shape = SubResource("RectangleShape2D_gbfbk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(328, 100)
+shape = SubResource("RectangleShape2D_ioo17")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(160, 192)
+shape = SubResource("RectangleShape2D_wse8f")

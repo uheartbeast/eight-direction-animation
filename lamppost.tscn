@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://mnwn7u0qdiep"]
+
+[ext_resource type="Texture2D" uid="uid://c06070lmgcaeu" path="res://lamppost.png" id="1_xaelx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q2k5p"]
+radius = 4.0
+
+[node name="Lamppost" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-8, -23)
+texture = ExtResource("1_xaelx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_q2k5p")
