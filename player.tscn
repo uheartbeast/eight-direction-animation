@@ -494,8 +494,12 @@ blend_mode = 1
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5tmop"]
+advance_mode = 2
+advance_expression = "input_vector.length() > 0.0"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7ahtn"]
+advance_mode = 2
+advance_expression = "input_vector.length() <= 0.0"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_7lmhl"]
 states/IdleState/node = SubResource("AnimationNodeBlendSpace2D_n7ghd")
@@ -517,7 +521,7 @@ graph_offset = Vector2(-28, -77)
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_i3pqv"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_hqtel"]
-graph_offset = Vector2(-324.167, 6.66667)
+graph_offset = Vector2(-348.333, 36.6667)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_jm5j8")
 nodes/StateMachine/position = Vector2(-133.333, 116.667)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_i3pqv")
@@ -542,6 +546,7 @@ autoplay = "idle_south"
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeBlendTree_hqtel")
+advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
 parameters/StateMachine/MoveState/IdleState/blend_position = Vector2(-0.00100869, -0.0671674)
 parameters/StateMachine/MoveState/RunState/blend_position = Vector2(-0.279545, 0.566959)
